@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="406" viewBox="0 0 820 406" role="img" aria-labelledby="t d">
+<title id="t">Guest MIPS: WASM JIT in WKWebView vs. native interpreter</title>
+<desc id="d">Native AOT, clang -O3: 10110 MIPS; WASM JIT · hot loop as one unit: 8800 MIPS; WASM JIT · blocks + dispatcher: 3143 MIPS; WASM JIT · one module per block: 2588 MIPS; Native interpreter (best without JIT): 1524 MIPS; Interpreter compiled to WASM: 1467 MIPS</desc>
+<rect width="820" height="406" rx="14" fill="#fcfcfb"/>
+<g font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'>
+<text x="28" y="40" font-size="19" font-weight="700" fill="#0b0b0b">JIT inside WKWebView, measured on a stock iPhone</text>
+<text x="28" y="62" font-size="13" fill="#52514e">Guest MIPS, higher is better · iPhone Air (A19 Pro) · iOS 27.0.1 · toy ISA with software MMU</text>
+<text x="792" y="84" font-size="11" text-anchor="end" fill="#52514e">vs. native interpreter</text>
+<text x="250" y="111" font-size="13" text-anchor="end" fill="#0b0b0b">Native AOT, clang -O3</text>
+<path d="M262 96 H598 a4 4 0 0 1 4 4 V114 a4 4 0 0 1 -4 4 H262 Z" fill="#b9b8b2"/>
+<text x="612" y="111" font-size="13" font-weight="600" fill="#0b0b0b">10 110</text>
+<text x="792" y="111" font-size="13" text-anchor="end" fill="#52514e">6.6×</text>
+<text x="250" y="151" font-size="13" text-anchor="end" fill="#0b0b0b">WASM JIT · hot loop as one unit</text>
+<path d="M262 136 H554 a4 4 0 0 1 4 4 V154 a4 4 0 0 1 -4 4 H262 Z" fill="#2a78d6"/>
+<text x="568" y="151" font-size="13" font-weight="600" fill="#0b0b0b">8 800¹</text>
+<text x="792" y="151" font-size="13" text-anchor="end" fill="#52514e">5.8×</text>
+<text x="250" y="191" font-size="13" text-anchor="end" fill="#0b0b0b">WASM JIT · blocks + dispatcher</text>
+<path d="M262 176 H364 a4 4 0 0 1 4 4 V194 a4 4 0 0 1 -4 4 H262 Z" fill="#2a78d6"/>
+<text x="378" y="191" font-size="13" font-weight="600" fill="#0b0b0b">3 143</text>
+<text x="792" y="191" font-size="13" text-anchor="end" fill="#52514e">2.1×</text>
+<text x="250" y="231" font-size="13" text-anchor="end" fill="#0b0b0b">WASM JIT · one module per block</text>
+<path d="M262 216 H345 a4 4 0 0 1 4 4 V234 a4 4 0 0 1 -4 4 H262 Z" fill="#2a78d6"/>
+<text x="359" y="231" font-size="13" font-weight="600" fill="#0b0b0b">2 588</text>
+<text x="792" y="231" font-size="13" text-anchor="end" fill="#52514e">1.7×</text>
+<text x="250" y="271" font-size="13" text-anchor="end" fill="#0b0b0b" font-weight="700">Native interpreter (best without JIT)</text>
+<path d="M262 256 H309 a4 4 0 0 1 4 4 V274 a4 4 0 0 1 -4 4 H262 Z" fill="#8b8a85"/>
+<text x="323" y="271" font-size="13" font-weight="600" fill="#0b0b0b">1 524</text>
+<text x="792" y="271" font-size="13" text-anchor="end" fill="#52514e">1.0×</text>
+<text x="250" y="311" font-size="13" text-anchor="end" fill="#0b0b0b">Interpreter compiled to WASM</text>
+<path d="M262 296 H307 a4 4 0 0 1 4 4 V314 a4 4 0 0 1 -4 4 H262 Z" fill="#8b8a85"/>
+<text x="321" y="311" font-size="13" font-weight="600" fill="#0b0b0b">1 467</text>
+<text x="792" y="311" font-size="13" text-anchor="end" fill="#52514e">1.0×</text>
+<line x1="28" y1="340" x2="792" y2="340" stroke="#e4e3de" stroke-width="1"/>
+<rect x="28" y="352" width="10" height="10" rx="2" fill="#2a78d6"/>
+<text x="44" y="361" font-size="12" fill="#52514e">WASM recompiler, JIT-compiled by WebKit</text>
+<rect x="318" y="352" width="10" height="10" rx="2" fill="#8b8a85"/>
+<text x="334" y="361" font-size="12" fill="#52514e">no-JIT baselines</text>
+<rect x="462" y="352" width="10" height="10" rx="2" fill="#b9b8b2"/>
+<text x="478" y="361" font-size="12" fill="#52514e">native reference (needs JIT-capable host)</text>
+<text x="28" y="386" font-size="11" fill="#52514e">¹ Safari rounds timers to ~1 ms; this run lasts 5 ms, so ±20 %. Ratios on a toy ISA are not a prediction for real ARM code.</text>
+</g></svg>
