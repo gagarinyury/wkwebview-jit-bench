@@ -1,0 +1,18 @@
+launch                 {"type": "launch", "origin": "scheme", "phase": "main", "ios": "27.0.1", "model": "iPhone18,4"}
+native                 {"type": "native", "interp_mips": 1524, "aot_mips": 10110, "interp_ms": 288.57112500071526, "aot_ms": 43.51783333718777, "chk_small_interp": 2890931130, "chk_small_aot": 2890931130, "chk_big_equal": true}
+start                  {"phase": "main", "hidden": false}
+env                    {"ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", "origin": "spike://app", "secureContext": true, "crossOriginIsolated": true, "SharedArrayBuffer": "undefined", "cores": 4, "webgl2": true, "navigatorGpu": true, "docHidden": false, "wasmTailCall": true, "wasmSharedMemory": true}
+gpu                    {"available": true, "adapter": true, "device": true, "limits": {"maxBufferSize": 268435456, "maxStorageBufferBindingSize": 134217728, "maxComputeInvocationsPerWorkgroup": 256, "maxComputeWorkgroupStorageSize": 16384}, "computeOk": true, "computeMs": 5}
+threads                {"hasSAB": false, "sharedBufferCtor": "SharedArrayBuffer", "bufferIsShared": "[object SharedArrayBuffer]", "ok": true, "ms": 24}
+ipc                    {"syncXhr_us": 73, "fetch_us": 113, "blob_MB": 16, "blob_MBps": 3200}
+bench_js_baseline      {"ok": true, "first_ms": 6, "best_ms": 5, "median_ms": 6, "mips_best": 8800}
+bench_wasm_interp      {"ok": true, "first_ms": 36, "best_ms": 30, "median_ms": 32, "mips_best": 1467, "chk1000": 2890931130}
+bench_loop_direct      {"ok": true, "first_ms": 6, "best_ms": 5, "median_ms": 6, "mips_best": 8800, "chk1000": 2890931130}
+bench_loop_paged       {"ok": true, "first_ms": 5, "best_ms": 5, "median_ms": 5, "mips_best": 8800, "chk1000": 2890931130}
+bench_chain_direct     {"ok": true, "first_ms": 12, "best_ms": 12, "median_ms": 13, "mips_best": 3667, "chk1000": 2890931130}
+bench_chain_paged      {"ok": true, "first_ms": 14, "best_ms": 14, "median_ms": 14, "mips_best": 3143, "chk1000": 2890931130}
+bench_xmod_direct      {"ok": true, "first_ms": 15, "best_ms": 15, "median_ms": 16, "mips_best": 2933, "chk1000": 2890931130}
+bench_xmod_paged       {"ok": true, "first_ms": 17, "best_ms": 17, "median_ms": 17, "mips_best": 2588, "chk1000": 2890931130}
+bench                  {"ref": {"small": 2890931130, "big": 3660834199}, "js_baseline": {"ok": true, "first_ms": 6, "best_ms": 5, "median_ms": 6, "mips_best": 8800}, "wasm_interp": {"ok": true, "first_ms": 36, "best_ms": 30, "median_ms": 32, "mips_best": 1467, "chk1000": 2890931130}, "loop_direct": {"ok": true, "first_ms": 6, "best_ms": 5, "median_ms": 6, "mips_best": 8800, "chk1000": 2890931130}, "loop_paged": {"ok": true, "first_ms": 5, "best_ms": 5, "median_ms": 5, "mips_best": 8800, "chk1000": 2890931130}, "chain_direct": {"ok": true, "first_ms": 12, "best_ms": 12, "median_ms": 13, "mips_best": 3667, "chk1000": 2890931130}, "chain_paged": {"ok": true, "first_ms": 14, "best_ms": 14, "median_ms": 14, "mips_best": 3143, "chk1000": 2890931130}, "xmod_direct": {"ok": true, "first_ms": 15, "best_ms": 15, "median_ms": 16, "mips_best": 2933, "chk1000": 2890931130}, "xmod_paged": {"ok": true, "first_ms": 17, "best_
+compileLatency         {"NB": 1000, "emit_us_per_block": 14, "bytes_per_block": 276, "sync_compile_us": 20, "sync_instantiate_us": 3.3, "first_call_us": 0, "second_call_us": 0, "async_compile_us": 4, "async_instantiate_us": 2}
+done                   {}

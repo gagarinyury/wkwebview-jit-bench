@@ -1,0 +1,15 @@
+{
+  "name": "wkwebview-jit-bench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Does JIT work inside WKWebView on stock iOS? Benchmarks: WASM recompiler vs interpreter.",
+  "scripts": {
+    "build:interp": "node tools/build-interp.mjs",
+    "test": "node tools/test-node.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "wabt": "^1.0.39"
+  }
+}

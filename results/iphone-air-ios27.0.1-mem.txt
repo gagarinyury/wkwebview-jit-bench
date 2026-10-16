@@ -1,0 +1,34 @@
+launch                 {"type": "launch", "origin": "scheme", "phase": "mem", "ios": "27.0.1", "model": "iPhone18,4"}
+start                  {"phase": "mem", "hidden": false}
+mem_try                {"mb": 128}
+mem_ok                 {"mb": 128}
+mem_try                {"mb": 256}
+mem_ok                 {"mb": 256}
+mem_try                {"mb": 384}
+mem_ok                 {"mb": 384}
+mem_try                {"mb": 512}
+mem_ok                 {"mb": 512}
+mem_try                {"mb": 640}
+mem_ok                 {"mb": 640}
+mem_try                {"mb": 768}
+mem_ok                 {"mb": 768}
+mem_try                {"mb": 896}
+mem_ok                 {"mb": 896}
+mem_try                {"mb": 1024}
+mem_ok                 {"mb": 1024}
+mem_try                {"mb": 1152}
+mem_ok                 {"mb": 1152}
+mem_try                {"mb": 1280}
+mem_ok                 {"mb": 1280}
+mem_try                {"mb": 1408}
+mem_ok                 {"mb": 1408}
+mem_try                {"mb": 1536}
+mem_ok                 {"mb": 1536}
+mem_try                {"mb": 1664}
+mem_ok                 {"mb": 1664}
+mem_try                {"mb": 1792}
+mem_ok                 {"mb": 1792}
+mem_try                {"mb": 1920}
+mem_ok                 {"mb": 1920}
+mem_try                {"mb": 2048}
+webcontent_terminated  {"type": "webcontent_terminated"}

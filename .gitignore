@@ -1,0 +1,6 @@
+build/
+node_modules/
+*.xcodeproj/
+App/Info.plist
+.DS_Store
+xcuserdata/

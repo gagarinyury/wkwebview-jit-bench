@@ -1,0 +1,29 @@
+name: JitSpike
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_OBJC_BRIDGING_HEADER: App/Bridging.h
+    GCC_OPTIMIZATION_LEVEL: "3"
+targets:
+  JitSpike:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+      - path: Web
+        type: folder
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: JitSpike
+        UILaunchScreen: {}
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.jitspike
