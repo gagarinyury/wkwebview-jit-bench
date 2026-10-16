@@ -146,6 +146,8 @@ Output lines start with `SPIKE|`; `python3 tools/show-results.py <log>` prints t
 
 The goal is a Nintendo 3DS-class emulator that runs at useful speed on an iPhone without the JIT entitlement. The plan: fork [Panda3DS](https://github.com/wheremyfoodat/Panda3DS) (GPL-3.0), reuse the ARM front end and IR of [Dynarmic](https://github.com/azahar-emu/dynarmic) (0BSD), and write the one missing piece — an **IR → WASM backend**. This repository is the feasibility check for that plan.
 
+**Follow-up:** the plan was carried out in [panda3ds-wasm](https://github.com/gagarinyury/panda3ds-wasm) (forks: [Panda3DS `wasm`](https://github.com/gagarinyury/Panda3DS/tree/wasm), [dynarmic `wasm32`](https://github.com/gagarinyury/dynarmic/tree/wasm32)). On an iPhone Air (iOS 27.0.1) the real Panda3DS core runs homebrew (53 of 58 devkitPro examples at the last full device run) and a commercial game boots and plays at 25–40 fps in 3D scenes (menus ~60 fps), with guest ARM recompiled to WASM at run time inside `WKWebView` and no JIT entitlement. Open: audio, exact frame pacing, save states.
+
 ---
 
 <sub>Not affiliated with Apple or Nintendo. No game data, firmware or keys are in this repository. MIT licensed.</sub>
